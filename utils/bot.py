@@ -10,7 +10,6 @@ class SlackBot:
             token=os.environ["SLACK_BOT_TOKEN"],
             signing_secret=os.environ["SLACK_SIGNING_SECRET"]
         )
-        self.register_events()
       
       def send_message(self, text: str, channel: str):  
             assert channel is not None, "Channel is required"
